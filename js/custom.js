@@ -1,42 +1,27 @@
-/*---------------------------------------------------------------------
-    File Name: custom.js
----------------------------------------------------------------------*/
+"use strict";
 
 $(function () {
-
-	"use strict";
-
-	/* Preloader
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
 	setTimeout(function () {
 		$('.loader_bg').fadeToggle();
 	}, 1500);
 
-	/* JQuery Menu
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
+	// JQuery Menu
 	$(document).ready(function () {
 		$('header nav').meanmenu();
 	});
 
-	/* Tooltip
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
+	// Tooltip
 	$(document).ready(function () {
 		$('[data-toggle="tooltip"]').tooltip();
 	});
 
-	/* sticky
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
+	// sticky
 	$(document).ready(function () {
 		$(".sticky-wrapper-header").sticky({ topSpacing: 0 });
 	});
 
-	/* Mouseover
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
+	// Mouseover
 	$(document).ready(function () {
 		$(".main-menu ul li.megamenu").mouseover(function () {
 			if (!$(this).parent().hasClass("#wrapper")) {
@@ -48,23 +33,17 @@ $(function () {
 		});
 	});
 
-	/* NiceScroll
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
+	// NiceScroll
 	$(".brand-box").niceScroll({
 		cursorcolor: "#9b9b9c",
 	});
 
-	/* NiceSelect
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
+	// NiceSelect
 	$(document).ready(function () {
 		$('select').niceSelect();
 	});
 
-	/* OwlCarousel - Blog Post slider
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
+	// OwlCarousel - Blog Post slider
 	$(document).ready(function () {
 		var owl = $('.carousel-slider-post');
 		owl.owlCarousel({
@@ -77,9 +56,7 @@ $(function () {
 		});
 	});
 
-	/* OwlCarousel - Banner Rotator Slider
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
+	// OwlCarousel - Banner Rotator Slider
 	$(document).ready(function () {
 		var owl = $('.banner-rotator-slider');
 		owl.owlCarousel({
@@ -95,9 +72,7 @@ $(function () {
 		});
 	});
 
-	/* OwlCarousel - Product Slider
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
+	// OwlCarousel - Product Slider
 	$(document).ready(function () {
 		var owl = $('#product-in-slider');
 		owl.owlCarousel({
@@ -132,9 +107,7 @@ $(function () {
 
 
 	
-	/* Scroll to Top
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
+	// Scroll to Top
 	$(window).on('scroll', function () {
 		scroll = $(window).scrollTop();
 		if (scroll >= 100) {
@@ -149,8 +122,7 @@ $(function () {
 		}, 1000);
 	});
 
-	/* Contact-form
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+	// Contact-form
 	$.validator.setDefaults({
 		submitHandler: function () {
 			alert("submitted!");
@@ -182,7 +154,6 @@ $(function () {
 			},
 			errorElement: "div",
 			errorPlacement: function (error, element) {
-				// Add the `help-block` class to the error element
 				error.addClass("help-block");
 
 				if (element.prop("type") === "checkbox") {
@@ -200,8 +171,6 @@ $(function () {
 		});
 	});
 
-	/* heroslider
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
 	var swiper = new Swiper('.heroslider', {
 		spaceBetween: 30,
@@ -221,9 +190,7 @@ $(function () {
 	});
 
 
-	/* Product Filters
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
+	// Product Filters
 	var swiper = new Swiper('.swiper-product-filters', {
 		slidesPerView: 3,
 		slidesPerColumn: 2,
@@ -256,9 +223,7 @@ $(function () {
 		}
 	});
 
-	/* Countdown
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
+	// Countdown
 	$('[data-countdown]').each(function () {
 		var $this = $(this),
 			finalDate = $(this).data('countdown');
@@ -271,9 +236,6 @@ $(function () {
 				+ '<div class="time-bar"><span class="time-box">%S</span> <span class="line-b">sec</span></div>'));
 		});
 	});
-
-	/* Deal Slider
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
 	$('.deal-slider').slick({
 		dots: false,
@@ -307,9 +269,6 @@ $(function () {
 		}]
 	});
 
-	/* News Slider
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
 	$('#news-slider').slick({
 		dots: false,
 		infinite: false,
@@ -341,9 +300,6 @@ $(function () {
 		}]
 	});
 
-	/* Fancybox
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-
 	$(".fancybox").fancybox({
 		maxWidth: 1200,
 		maxHeight: 600,
@@ -351,8 +307,6 @@ $(function () {
 		height: '70%',
 	});
 
-	/* Toggle sidebar
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 
 	$(document).ready(function () {
 		$('#sidebarCollapse').on('click', function () {
@@ -361,9 +315,7 @@ $(function () {
 		});
 	});
 
-	/* Product slider 
-	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-	// optional
+	
 	$('#blogCarousel').carousel({
 		interval: 5000
 	});
